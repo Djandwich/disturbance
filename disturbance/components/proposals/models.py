@@ -402,6 +402,7 @@ class Proposal(RevisionedMixin):
     management_area = models.CharField(max_length=255,null=True,blank=True)
 
     fee_invoice_reference = models.CharField(max_length=50, null=True, blank=True, default='')
+    migrated = models.BooleanField(default=False)
 
     class Meta:
         app_label = 'disturbance'
